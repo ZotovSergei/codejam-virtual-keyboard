@@ -1,0 +1,69 @@
+.row_keys,
+.key,
+.main,
+.wraper__keyboard {
+    display: flex;    
+}
+.main,
+.wraper__keyboard {    
+    flex-direction: column;    
+}
+.main {        
+    align-items: center;
+}
+.wraper__keyboard {        
+    align-items: flex-start;
+}
+html,
+.text__area {
+    background-color: cadetblue;
+}
+.text__area {
+    width: 640px;
+    height: 300px;
+    resize: none;    
+    border: 2px solid bisque;
+    font-size: 30px;
+    outline: none;
+}
+html {
+    height: 100%;    
+}
+.key {
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px 2px;
+    text-align: center;    
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.active_key {    
+    background-color: aliceblue;
+}
+
+/* Key width */
+.ShiftLeft {
+    width: 125px;
+}
+.CapsLock {
+    width: 100px;
+}
+.Tab,.Backspace {
+    width: 75px;
+}
+.NumpadEnter {
+    width: 80px;
+}
+.ShiftRight {
+    width: 55px;
+}
+.Space {
+    width: 326px;
+}
+.AltLeft, .AltRight {
+    width: 60px;
+}
