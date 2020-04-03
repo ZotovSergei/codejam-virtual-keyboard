@@ -1,3 +1,7 @@
+.hidden {
+    display: none;
+}
+
 .row_keys,
 .key,
 .main,
@@ -47,7 +51,7 @@ html {
 
 /* Key width */
 .ShiftLeft {
-    width: 125px;
+    width: 130px;
 }
 .CapsLock {
     width: 100px;
@@ -59,7 +63,7 @@ html {
     width: 80px;
 }
 .ShiftRight {
-    width: 55px;
+    width: 50px;
 }
 .Space {
     width: 326px;
