@@ -4,6 +4,14 @@ export class CheckPushKeys {
         node.forEach (item => {
          item.innerHTML = item.innerHTML.toLocaleUpperCase();
         })
+        node = document.querySelectorAll(`.shift`);
+        node.forEach (item => {
+            item.classList.add('hidden');
+        })
+        node = document.querySelectorAll(`.unshift`);
+        node.forEach (item => {
+            item.classList.remove('hidden');
+        }) 
         // for (let index = 65; index <= 90; index++) {
         //     const element = document.getElementById(`${index}`);
         //     element.innerHTML = element.innerHTML.toLocaleUpperCase();            
@@ -14,6 +22,14 @@ export class CheckPushKeys {
         node.forEach (item => {
          item.innerHTML = item.innerHTML.toLocaleLowerCase();
         })
+        node = document.querySelectorAll(`.unshift`);
+        node.forEach (item => {
+            item.classList.add('hidden');
+        })
+        node = document.querySelectorAll(`.shift`);
+        node.forEach (item => {
+            item.classList.remove('hidden');
+        }) 
         // for (let index = 65; index <= 90; index++) {
         //     const element = document.getElementById(`${index}`);
         //     element.innerHTML = element.innerHTML.toLocaleLowerCase();
@@ -30,12 +46,8 @@ export class CheckPushKeys {
             }
         }
     }
-    changeLetters(lang) {
-        
-        console.log('------------');
-        console.log(lang);
-        if (lang == 'ru') {
-            console.log('ru');
+    changeLetters(lang) {    
+        if (lang == 'ru') {            
             // en = hidden
             // ru = visible
             let nodeRu = document.querySelectorAll(`.${lang}`)
@@ -48,8 +60,7 @@ export class CheckPushKeys {
                 // item.innerHTML = item.innerHTML.toLocaleLowerCase();
             })
               
-        } else {
-            console.log('en');
+        } else {            
             let nodeEn = document.querySelectorAll(`.${lang}`)
             nodeEn.forEach(item=> {
                 item.classList.remove('hidden');

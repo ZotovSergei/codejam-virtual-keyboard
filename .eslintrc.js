@@ -3,9 +3,14 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
-    // "extends": "airbnb-base",    
-    // "extends": "airbnb-base/legacy",
+    // "extends": ["airbnb", "prettier"],
+    // "plugins": ["prettier"],
+    // "rules": {
+    //   "prettier/prettier": ["error"]
+    // },
+    // "extends": "eslint:recommended",
+    // "extends": "airbnb-base",
+    "extends": "airbnb-base/legacy",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -15,5 +20,7 @@ module.exports = {
         "sourceType": "module"
     },
     "rules": {
+      // "prettier/prettier": ["error"]
     }
+
 };

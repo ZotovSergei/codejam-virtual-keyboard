@@ -6,16 +6,16 @@
 .key,
 .main,
 .wraper__keyboard {
-    display: flex;    
+    display: flex;
 }
 .main,
-.wraper__keyboard {    
-    flex-direction: column;    
+.wraper__keyboard {
+    flex-direction: column;
 }
-.main {        
+.main {
     align-items: center;
 }
-.wraper__keyboard {        
+.wraper__keyboard {
     align-items: flex-start;
 }
 html,
@@ -25,13 +25,13 @@ html,
 .text__area {
     width: 640px;
     height: 300px;
-    resize: none;    
+    resize: none;
     border: 2px solid bisque;
     font-size: 30px;
     outline: none;
 }
 html {
-    height: 100%;    
+    height: 100%;
 }
 .key {
     width: 50px;
@@ -40,14 +40,22 @@ html {
     border: 1px solid black;
     border-radius: 5px;
     margin: 2px 2px;
-    text-align: center;    
+    text-align: center;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    cursor: pointer;
 }
-.active_key {    
-    background-color: aliceblue;
+.key:hover {
+  background-color: aquamarine;
 }
+.key:active {
+  background-color: aliceblue;
+}
+.active_key {
+  background-color: aliceblue;
+}
+
 
 /* Key width */
 .ShiftLeft {

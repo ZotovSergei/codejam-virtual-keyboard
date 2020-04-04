@@ -70,6 +70,10 @@ let node = document.querySelectorAll(`.${hiddenLang}`)
 node.forEach (item => {
   item.classList.add('hidden');
 })
+node = document.querySelectorAll(`.unshift`)
+node.forEach (item => {
+  item.classList.add('hidden');
+})
 // body.appendChild(keys);
 
 
