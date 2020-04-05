@@ -42,6 +42,7 @@ document.addEventListener('keydown', function (event) {
     case 'Tab':
     case 'AltRight':
     case 'MetaLeft':
+    // case 'Ctrl':
       event.preventDefault();
       break;
     case 'CapsLock':
@@ -52,7 +53,9 @@ document.addEventListener('keydown', function (event) {
       break;
   }
   const a = document.querySelector(`.${event.code}`);
-  a.classList.add('active_key');
+  if (a) {
+    a.classList.add('active_key');
+  }
 });
 
 // eslint-disable-next-line func-names
@@ -60,8 +63,10 @@ document.addEventListener('keyup', function (event) {
   document.getElementById('t-id').focus();
   lang = localStorage.getItem('lang');
   const a = document.querySelector(`.${event.code}`);
-  if (a.classList.contains('active_key')) {
-    a.classList.remove('active_key');
+  if (a) {
+    if (a.classList.contains('active_key')) {
+      a.classList.remove('active_key');
+    }
   }
   if (event.code === 'ShiftLeft') {
     isShiftPush = false;
@@ -96,11 +101,10 @@ const nodeKeys = document.querySelectorAll('.key');
 nodeKeys.forEach(item=> {
   item.addEventListener('click', (event) => {
     console.dir(event);
-    console.log(event.target.innerHTML);
-    switch (event.target.innerHTML) {
+    console.log(event.target.innerText);
+    switch (event.target.innerText) {
       case 'Backspace':
         if (textArea.value.length !== 0) {
-          // textArea.value += textArea.value.slice(0, textArea.length - 1);
           textArea.value = textArea.value.slice(0, -1);
         }
         break;
@@ -118,11 +122,12 @@ nodeKeys.forEach(item=> {
         // eslint-disable-next-line no-tabs
         textArea.value += '\n';
         break;
-      case ' ':
-        textArea.value += 11;
-        break;
       default:
-        textArea.value += event.target.innerText;
+        if (event.target.classList.contains('Space')) {
+          textArea.value += ' ';
+        } else {
+          textArea.value += event.target.innerText;
+        }
         break;
     }
   });
