@@ -86,4 +86,22 @@ export class CheckPushKeys {
       });
     }
   }
+
+  // eslint-disable-next-line class-methods-use-this
+  capsLock(countCapsLockPush, lang) {
+    console.log(countCapsLockPush);
+    if (countCapsLockPush < 1) {
+      let node = document.querySelectorAll(`.${lang}`);
+      node.forEach(item => {
+        // eslint-disable-next-line no-param-reassign
+        item.innerHTML = item.innerHTML.toLocaleUpperCase();
+      });
+    } else {
+      let node = document.querySelectorAll(`.${lang}`);
+      node.forEach(item => {
+        // eslint-disable-next-line no-param-reassign
+        item.innerHTML = item.innerHTML.toLocaleLowerCase();
+      });
+    }
+  }
 }

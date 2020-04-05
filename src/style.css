@@ -5,23 +5,33 @@
 .row_keys,
 .key,
 .main,
-.wraper__keyboard {
+.wraper__keyboard,
+.header {
     display: flex;
 }
+
 .main,
-.wraper__keyboard {
+.wraper__keyboard,
+.header {
     flex-direction: column;
 }
-.main {
+
+.main,
+.header {
     align-items: center;
+}
+.h1 {
+  color: cornsilk;
 }
 .wraper__keyboard {
     align-items: flex-start;
 }
+
 html,
 .text__area {
     background-color: cadetblue;
 }
+
 .text__area {
     width: 640px;
     height: 300px;
@@ -29,10 +39,13 @@ html,
     border: 2px solid bisque;
     font-size: 30px;
     outline: none;
+    margin-bottom: 15px;
 }
+
 html {
     height: 100%;
 }
+
 .key {
     width: 50px;
     height: 50px;
@@ -77,4 +90,7 @@ html {
 }
 .AltLeft, .AltRight {
     width: 60px;
+}
+.describe {
+  margin: 0 0;
 }
