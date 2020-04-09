@@ -100,8 +100,7 @@ node.forEach(item => {
 const nodeKeys = document.querySelectorAll('.key');
 nodeKeys.forEach(item=> {
   item.addEventListener('click', (event) => {
-    console.dir(event);
-    console.log(event.target.innerText);
+
     switch (event.target.innerText) {
       case 'Backspace':
         if (textArea.value.length !== 0) {
@@ -112,7 +111,10 @@ nodeKeys.forEach(item=> {
       case 'Shift':
       case 'Ctrl':
       case 'Win':
+        break;
       case 'CapsLock':
+        checkPushKeys.capsLock(countCapsLockPush, lang);
+        countCapsLockPush = (countCapsLockPush > 0) ? 0 : countCapsLockPush + 1;
         break;
       case 'Tab':
         // eslint-disable-next-line no-tabs
